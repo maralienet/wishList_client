@@ -30,7 +30,7 @@ export const Sections: React.FC<SectionsProps> = ({ onClick }) => {
     const [sects, setSects] = useState<Section[]>([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/categories')
+        axios.get('https://wishlist-server-7u5y.onrender.com/categories')
             .then((res) => {
                 let data = JSON.parse(res.data);
                 setSects(data);

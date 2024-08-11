@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.sass';
-import { Sections, SectionsCollapsible } from './Comopnents/Sections';
-import Wishes from './Comopnents/Wishes';
+import { Sections, SectionsCollapsible } from './Components/Sections';
+import Wishes from './Components/Wishes';
 
 const App: React.FC = () => {
   const [active, setActive] = useState('');

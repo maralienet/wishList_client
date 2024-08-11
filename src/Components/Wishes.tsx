@@ -42,12 +42,12 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
 
     useEffect(() => {
         if (section) {
-            axios.get(`http://localhost:5000/wishes?categId=${section}`)
+            axios.get(`https://wishlist-server-7u5y.onrender.com/wishes?categId=${section}`)
                 .then((res) => {
                     let data = JSON.parse(res.data);
                     setWishes(data);
                 })
-            axios.get(`http://localhost:5000/categories?id=${section}`)
+            axios.get(`https://wishlist-server-7u5y.onrender.com/categories?id=${section}`)
                 .then((res) => {
                     let data = JSON.parse(res.data);
                     setSect(data[0].name);
