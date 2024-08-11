@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rampart+One&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pangolin&family=Rampart+One&display=swap')
+
+$heading: "Rampart One", sans-serif
+$regular: "Pangolin", cursive
+
+@mixin rainbow
+  text-decoration: underline
+  text-decoration-color: #e17979
+  background: -webkit-linear-gradient(0deg, #e00a0a 10px,transparent 10px,#e0670a 10px,#e0670a 20px,transparent 20px,#e0b90a 20px,#e0b90a 30px,transparent 30px,#63e00a 30px,#63e00a 40px,transparent 40px,#0a9ce0 40px,#0a9ce0 50px,transparent 50px,#0a0ae0 50px,#0a0ae0 60px,transparent 60px,#6e0ae0 60px, #6e0ae0 70px)
+  background-size: 100% 40px
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+body
+  background-color: #fdf8e6
+  font: 1em $regular
+  color: #363636
+
+  .greet
+    font: 2em $heading
+    text-align: center
+    &+h2
+      text-align: center
+
+  .body
+    width: 80%
+    margin: 0 auto
+    display: flex
+    position: relative
+    box-sizing: border-box
+    border: 25px solid #a3e6ff
+    border-radius: 20px
+    background-color: #fffdf7
+    background-image: linear-gradient(90deg, transparent 23px, #d49e9e 23px, #d49e9e 25px, transparent 25px), linear-gradient(#eee .1em, transparent .1em)
+    background-size: 100% 24px
+    min-height: 300px
+    padding: 20px 0 20px 45px
+
+    &::before
+      content: ''
+      position: absolute
+      top: -4px
+      bottom: -4.5px
+      right: -4.5px
+      left: -4.5px
+      border: 5px solid #4c869b5d
+      border-radius: 10px
+      pointer-events: none
+
+    aside
+      width: 25%
+      @media screen and (orientation: portrait)
+        width: 100%
+
+    @media screen and (orientation: portrait)
+      display: block
+      width: auto
+      border: 15px solid #a3e6ff
+      border-radius: 20px
+
+  .sections, .Collapsible
+    display: flex
+    flex-direction: column
+
+    .section
+      cursor: pointer
+      font-size: 1.2em
+      padding: 8px 0 7px
+      transition: all 0.3s ease-out
+      &:hover
+        @include rainbow
+    .Collapsible__trigger
+      cursor: pointer
+      font-size: 1.3em
+      padding: 8px 0 7px
+      transition: all 0.3s ease-out
+      color: #06a3dc
+
+    .active
+      text-decoration: underline
+      text-decoration-color: #e17979
+
+    p
+      color: #06a3dc
+      font-size: 1.3em
+      margin: 0 0 10px 0
+
+  .sections
+    @media screen and (orientation: portrait)
+      display: none
+
+  .Collapsible
+    display: none
+    margin-bottom: 15px
+    text-align: center
+
+    @media screen and (orientation: portrait)
+      display: block
+
+  .wishes
+    width: 75%
+    margin-right: 18px
+
+    &>div
+      height: 430px
+      max-height: 430px
+      overflow-y: scroll
+      scrollbar-color: #84c3d8 #0be52f00
+      -webkit-scrollbar-color: #84c3d8 #0be52f00
+      padding-bottom: 5px
+
+    .wish
+      display: flex
+      justify-items: center
+      align-items: center
+      font-size: 1.05em
+      padding: 4px 0
+
+      img
+        width: 12px
+        height: auto
+        padding-right: 3px
+
+      &>a
+        text-decoration: none
+        color: #363636
+        &:hover
+          text-decoration: underline
+          text-decoration-color: #7b34cd
+          font-weight: 600
+
+    .secName
+      text-align: center
+      margin: 0 0 15px 0
+      font-size: 1.3em
+      color: #7b34cd
+      text-decoration: none
+
+    @media screen and (orientation: portrait)
+      width: 95%
+
+  .rings
+    margin: 0 25px 0 5px
+    width: 32px
+    height: auto
+    background: url('/pics/rr.svg') space center #0000000a
+    background-size: 23px 25px
+    border-radius: 5px
+    background-origin: content-box
+
+    @media screen and (orientation: portrait)
+      margin: 5px 30px 25px 0
+      width: auto
+      height: 30px
+      background: url('/pics/rr1.svg') space center #0000000a
+      background-size: 25px 23px
+      border-radius: 5px
+      background-origin: content-box
