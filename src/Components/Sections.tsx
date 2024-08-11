@@ -56,6 +56,15 @@ export const Sections: React.FC<SectionsProps> = ({ onClick }) => {
 
 export const SectionsCollapsible: React.FC<SectionsProps> = ({ onClick }) => {
     const [active, setActive] = useState('');
+    const [sects, setSects] = useState<Section[]>([]);
+
+    useEffect(() => {
+        axios.get('https://wishlist-server-7u5y.onrender.com/categories')
+            .then((res) => {
+                let data = JSON.parse(res.data);
+                setSects(data);
+            })
+    }, []);
 
     function handleClick(name: string) {
         setActive(name);
@@ -64,10 +73,11 @@ export const SectionsCollapsible: React.FC<SectionsProps> = ({ onClick }) => {
 
     return (
         <Collapsible trigger='☆ Категории ☆'>
-            <Section name="Книги" isActive={active === 'Книги'} onClick={() => handleClick("Книги")} />
-            <Section name="Игры" isActive={active === 'Игры'} onClick={() => handleClick("Игры")} />
-            <Section name="Вкусности" isActive={active === 'Вкусности'} onClick={() => handleClick("Вкусности")} />
-            <Section name="Другое" isActive={active === 'Другое'} onClick={() => handleClick("Другое")} />
+            {
+                sects.length > 0 && sects?.map(sect => (
+                    <Section key={sect.id} name={sect.name} isActive={active === sect.id} onClick={() => handleClick(sect.id)} />
+                ))
+            }
         </Collapsible>
     );
 }
