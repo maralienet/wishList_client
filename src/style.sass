@@ -16,12 +16,16 @@ body
   background-color: #fdf8e6
   font: 1em $regular
   color: #363636
+  padding-bottom: 50px
 
   .greet
     font: 2em $heading
     text-align: center
     &+h2
       text-align: center
+      @media screen and (orientation: portrait)
+        font: 1.3em $heading
+
 
   .body
     width: 80%
