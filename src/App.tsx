@@ -1,31 +1,19 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import './style.sass';
-import { Sections, SectionsCollapsible } from './Components/Sections';
-import Wishes from './Components/Wishes';
+import HomePage from './Pages/HomePage'
 
-const App: React.FC = () => {
-  const [active, setActive] = useState('');
+interface HomePageProps extends RouteComponentProps {}
 
-  function handleClick(name: string) {
-    setActive(name);
-  };
-
+const App: React.FC<HomePageProps> = () => {
   return (
     <div className="App">
-      <header>
-        <h1 className='greet'>Привет! llll</h1>
-        <h2>Это мой список желаний. Если затрудняешься с выбором подарка
-          для меня, он должен помочь 😊
-        </h2>
-      </header>
-      <div className="body">
-        <aside>
-          <Sections onClick={handleClick} />
-          <SectionsCollapsible onClick={handleClick} />
-        </aside>
-        <div className="rings"></div>
-        <Wishes section={active} />
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={HomePage}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
