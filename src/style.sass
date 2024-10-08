@@ -3,6 +3,10 @@
 
 $heading: "Rampart One", sans-serif
 $regular: "Pangolin", cursive
+$graffit: '#363636'
+$lightYellow: '#fdf8e6'
+$yellow: '#faf1d2'
+
 
 @mixin rainbow
   text-decoration: underline
@@ -13,10 +17,15 @@ $regular: "Pangolin", cursive
   -webkit-text-fill-color: transparent
 
 body
-  background-color: #fdf8e6
+  background-color: $lightYellow
   font: 1em $regular
-  color: #363636
+  color: $graffit
   padding-bottom: 20px
+
+  aside
+    width: 25%
+    background: $yellow
+
 
   .greet
     font: 2em $heading
@@ -127,7 +136,7 @@ body
 
       &>a
         text-decoration: none
-        color: #363636
+        color: $graffit
         &:hover
           text-decoration: underline
           text-decoration-color: #7b34cd
