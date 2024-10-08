@@ -4,6 +4,7 @@
 $heading: "Rampart One", sans-serif
 $regular: "Pangolin", cursive
 $graffit: #363636
+$lightGraffit: #595959
 $lightYellow: #fdf8e6
 $brightYellow: #ffcd00
 $yellow: #f3e3ab
@@ -52,13 +53,22 @@ body
       padding: 0 10px
       margin: 0 15px
       input
-        padding: 5px 10px
+        padding: 7px 10px
         border-radius: 100px
-        border: 1px $brightYellow
+        border: 2px #ffcd00 solid
         &::placeholder
           color: transparent
+        &:active
+          outline: none
+
       label
-        position: absolute
+        position: relative
+        left: 13px
+        top: 28px
+        color: $lightGraffit
+
+      &:has(input:active)
+        background: red
 
     .menu
       padding: 0 10px
