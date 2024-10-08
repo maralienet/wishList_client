@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   }
 
   return (
-    <>
+    <div className="home">
       <header>
         <h1 className="greet">Привет!</h1>
         <h2>
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         <div className="rings"></div>
         <Wishes section={active} />
       </div>
-    </>
+    </div>
   );
 };
 

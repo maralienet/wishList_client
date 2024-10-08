@@ -1,10 +1,23 @@
 import React, { useState } from "react";
+import logo from '../pics/logo.png';
 
 const LeftMenu: React.FC = () => {
   return (
     <aside className="leftMenu">
         <div className="top">
-
+            <img src={logo} className="logo" />
+            <p>Вишлистик</p>
+        </div>
+        <div className="menu">
+            <div className="menuItem">
+                Вход
+            </div>
+            <div className="menuItem">
+                Регистрация
+            </div>
+            <div className="menuItem">
+                О проекте
+            </div>
         </div>
     </aside>
   );
