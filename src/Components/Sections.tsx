@@ -57,7 +57,7 @@ export const Sections: React.FC<SectionsProps> = ({ onClick }) => {
           />
         ))
       ) : (
-        <img src={loading} />
+        <img className='loading' src={loading} />
       )}
     </div>
   );
@@ -93,7 +93,7 @@ export const SectionsCollapsible: React.FC<SectionsProps> = ({ onClick }) => {
           />
         ))
       ) : (
-        <img src={loading} />
+        <img className='loading' src={loading} />
       )}
     </Collapsible>
   );
