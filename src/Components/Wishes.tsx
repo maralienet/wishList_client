@@ -76,7 +76,7 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
         {wishes.length > 0 ? (
           wishes?.map((wish) => <Wish inner={wish.text} url={wish.url} />)
         ) : (
-        //   section && 
+          section && 
           <img className='loading' src={loading} />
         )}
       </div>
