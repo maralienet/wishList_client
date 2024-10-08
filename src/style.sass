@@ -7,7 +7,6 @@ $graffit: #363636
 $lightYellow: #fdf8e6
 $yellow: #f3e3ab
 
-
 @mixin rainbow
   text-decoration: underline
   text-decoration-color: #e17979
@@ -21,13 +20,37 @@ body
   font: 1em $regular
   color: $graffit
   padding-bottom: 20px
+  margin: 0
+
+  .App
+    display: flex
+    justify-content: space-between
 
   .leftMenu
     width: 20%
     background: $yellow
+    .top
+      margin-bottom: 15px
+      .logo
+        width: 80px
+        height: auto
+        display: block
+        margin-left: auto
+        margin-right: auto
+        margin-top: 15px
+      p
+        margin: 0
+        text-align: center
+        font-weight: bolder
+        font-size: 1.1em
+        letter-spacing: 4px
+
+    .menu
+      .menuItem
+        font-size: 1em
 
   .home
-    width: 80%
+    width: 75%
 
   .greet
     font: 2em $heading
