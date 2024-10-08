@@ -56,6 +56,7 @@ body
         padding: 7px 10px
         border-radius: 100px
         border: 2px #ffcd00 solid
+        font: 1em $regular
         &::placeholder
           color: transparent
         &:active, &:focus
@@ -66,10 +67,12 @@ body
         left: 13px
         top: 28px
         color: $lightGraffit
+        transition: all .3s ease-out
 
-      &:focus-within
-        label
-          top: 0px
+      &:focus-within label,
+      input:not(:placeholder-shown) + label
+        top: -5px
+        color: $graffit
 
     .menu
       padding: 0 10px

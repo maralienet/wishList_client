@@ -10,7 +10,7 @@ const LeftMenu: React.FC = () => {
         </div>
         <div className="search">
             <label htmlFor="search">Ввести код друга</label>
-            <input type="search" placeholder="Код друга" id='search'></input>
+            <input type="number" placeholder="Код друга" id='search'></input>
         </div>
         <div className="menu">
             <div className="menuItem">
