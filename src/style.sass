@@ -5,6 +5,7 @@ $heading: "Rampart One", sans-serif
 $regular: "Pangolin", cursive
 $graffit: #363636
 $lightYellow: #fdf8e6
+$brightYellow: #ffcd00
 $yellow: #f3e3ab
 
 @mixin rainbow
@@ -53,6 +54,11 @@ body
       input
         padding: 5px 10px
         border-radius: 100px
+        border: 1px $brightYellow
+        &::placeholder
+          color: transparent
+      label
+        position: absolute
 
     .menu
       padding: 0 10px
