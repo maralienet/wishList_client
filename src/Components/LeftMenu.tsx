@@ -8,6 +8,10 @@ const LeftMenu: React.FC = () => {
             <img src={logo} className="logo" />
             <p>Вишлистик</p>
         </div>
+        <div className="search">
+            <label htmlFor="search">Код вишлиста друга</label>
+            <input type="search" placeholder="Код друга" id='search'></input>
+        </div>
         <div className="menu">
             <div className="menuItem">
                 Вход
