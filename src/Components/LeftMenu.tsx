@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import logo from "../pics/logo.png";
 
 const LeftMenu: React.FC = () => {
-  function handleClick(e: Event) {
-    if(e)
-        console.log()
-  }
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    const { value } = e.target;
+    e.target.value = value.replace(/\D/g, "");
+  };
 
   return (
     <aside className="leftMenu">
@@ -15,7 +15,12 @@ const LeftMenu: React.FC = () => {
       </div>
       <div className="search">
         <label htmlFor="search">Ввести код друга</label>
-        <input type="search" placeholder="Код друга" id="search"></input>
+        <input
+          onChange={handleChange}
+          type="search"
+          placeholder="Код друга"
+          id="search"
+        ></input>
       </div>
       <div className="menu">
         <div className="menuItem">Вход</div>
