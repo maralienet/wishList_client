@@ -58,7 +58,7 @@ body
         border: 2px #ffcd00 solid
         &::placeholder
           color: transparent
-        &:active
+        &:active,&:focus
           outline: none
 
       label
@@ -67,7 +67,7 @@ body
         top: 28px
         color: $lightGraffit
 
-      &:has(input:active)
+      &:has(input:focus)
         background: red
 
     .menu
