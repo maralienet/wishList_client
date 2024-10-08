@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./style.sass";
 import { Sections, SectionsCollapsible } from "../Components/Sections";
 import Wishes from "../Components/Wishes";
 
-const HomePage: React.FC = () => {
-  const [active, setActive] = useState('');
+const Home: React.FC = () => {
+  const [active, setActive] = useState("");
 
   function handleClick(name: string) {
     setActive(name);
-  };
-  
+  }
+
   return (
     <>
       <header>
@@ -32,4 +31,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Home;
