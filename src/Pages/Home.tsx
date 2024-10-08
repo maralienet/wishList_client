@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./style.sass";
 import { Sections, SectionsCollapsible } from "../Components/Sections";
 import Wishes from "../Components/Wishes";
 
