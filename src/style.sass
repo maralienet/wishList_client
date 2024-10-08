@@ -61,9 +61,6 @@ body
           color: white
         &:active, &:focus
           outline: none
-        &:not(:placeholder-shown) + label
-          top: -3px
-          color: $graffit
 
       label
         position: relative
@@ -72,7 +69,8 @@ body
         color: $lightGraffit
         transition: all .3s ease-out
 
-      &:focus-within label
+      &:focus-within label,
+      input:not(:placeholder-shown) + label
         top: -3px
         color: $graffit
 
