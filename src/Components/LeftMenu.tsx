@@ -15,14 +15,18 @@ const LeftMenu: React.FC = () => {
         <p>Вишлистик</p>
       </div>
       <div className="search">
-        <input
-          onChange={handleChange}
-          type="search"
-          placeholder="Код друга"
-          id="search"
-        />
-        <label htmlFor="search">Ввести код друга</label>
-        <button><img src={search}/></button>
+        <div>
+          <input
+            onChange={handleChange}
+            type="search"
+            placeholder="Код друга"
+            id="search"
+          />
+          <label htmlFor="search">Ввести код друга</label>
+        </div>
+        <button>
+          <img src={search} />
+        </button>
       </div>
       <div className="menu">
         <div className="menuItem">Вход</div>
