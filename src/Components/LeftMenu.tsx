@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const LeftMenu: React.FC = () => {
   return (
-    <aside>
+    <aside className="leftMenu">
         <div className="top">
 
         </div>
