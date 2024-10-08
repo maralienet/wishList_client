@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const App: React.FC = () => {
+const LeftMenu: React.FC = () => {
   return (
     <aside>
         <div className="top">
-            
+
         </div>
     </aside>
   );
 };
 
-export default App;
+export default LeftMenu;
