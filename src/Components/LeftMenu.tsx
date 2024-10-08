@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import logo from "../pics/logo.png";
+import search from "../pics/search.png";
 
 const LeftMenu: React.FC = () => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -21,6 +22,7 @@ const LeftMenu: React.FC = () => {
           id="search"
         />
         <label htmlFor="search">Ввести код друга</label>
+        <button><img src={search}/></button>
       </div>
       <div className="menu">
         <div className="menuItem">Вход</div>
