@@ -29,9 +29,18 @@ const LeftMenu: React.FC = () => {
         </button>
       </div>
       <div className="menu">
-        <div className="menuItem">Вход</div>
-        <div className="menuItem">Регистрация</div>
-        <div className="menuItem">О проекте</div>
+        <div className="menuItem">
+          <a href='/auth'>Вход</a>
+        </div>
+        <div className="menuItem">
+          <a>Регистрация</a>
+        </div>
+        <div className="menuItem">
+          <a href='/'>Мой вишлист</a>
+        </div>
+        <div className="menuItem">
+          <a>О проекте</a>
+        </div>
       </div>
     </aside>
   );

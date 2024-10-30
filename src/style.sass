@@ -28,7 +28,8 @@ body
   .App
     height: 100vh
     display: flex
-    justify-content: space-between
+    &>div
+      width: 80%
 
   .leftMenu
     width: 20%
@@ -56,7 +57,7 @@ body
       padding: 0 10px
       margin: 0 15px
       height: 40px
-      >div
+      &>div
         position: relative
         input
           padding: 5px 10px
@@ -102,6 +103,9 @@ body
         cursor: pointer
         &:hover
           font-weight: bold
+        a
+          text-decoration: none
+          color: $graffit
 
   .home
     width: 75%
