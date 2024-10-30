@@ -7,6 +7,7 @@ $graffit: #363636
 $lightGraffit: #595959
 $lightYellow: #fdf8e6
 $brightYellow: #ffcd00
+$brightYellowHover: #edbf01
 $yellow: #f3e3ab
 
 @mixin rainbow
@@ -50,41 +51,48 @@ body
         letter-spacing: 4px
 
     .search
+      display: flex
+      align-items: center
       padding: 0 10px
       margin: 0 15px
       height: 40px
-      input
-        padding: 7px 10px
-        border-radius: 100px
-        border: 2px #ffcd00 solid
-        font: 1em $regular
-        &::placeholder
-          color: white
-        &:active, &:focus
-          outline: none
-
-      label
+      >div
         position: relative
-        left: 11px
-        top: -28px
-        color: $lightGraffit
-        transition: all .3s ease-out
+        input
+          padding: 5px 10px
+          border-radius: 10px
+          border: 2px #ffcd00 solid
+          font: 1em $regular
+          &::placeholder
+            color: white
+          &:active, &:focus
+            outline: none
 
-      &:focus-within label,
-      input:not(:placeholder-shown) + label
-        top: -58px
-        color: $graffit
+        label
+          position: absolute
+          left: 10px
+          top: 6px
+          color: $lightGraffit
+          transition: all .3s ease-out
+
+        &:focus-within label,
+        input:not(:placeholder-shown) + label
+          top: -20px
+          color: $graffit
 
       button
+        cursor: pointer
         background: $brightYellow
         border: none
         border-radius: 50px
         height: 40px
-        width: auto
-        padding: 0px 8px
+        width: 40px
+        margin-left: 8px
         img
-          width: 25px
+          width: 20px
           height: auto
+        &:hover
+          background: $brightYellowHover
 
     .menu
       padding: 0 10px
@@ -106,7 +114,7 @@ body
       @media screen and (orientation: portrait)
         font-size: 1.3em
 
-  .body
+  .book
     width: 80%
     margin: 0 auto
     display: flex

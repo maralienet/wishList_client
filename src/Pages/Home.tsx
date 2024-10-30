@@ -18,7 +18,7 @@ const Home: React.FC = () => {
           он должен помочь 😊
         </h2>
       </header>
-      <div className="body">
+      <div className="book">
         <aside>
           <Sections onClick={handleClick} />
           <SectionsCollapsible onClick={handleClick} />
