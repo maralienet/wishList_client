@@ -7,6 +7,10 @@ const LeftMenu: React.FC = () => {
     const { value } = e.target;
     e.target.value = value.replace(/\D/g, "");
   };
+  
+  function handleClick() {
+    console.log('name');
+  }
 
   return (
     <aside className="leftMenu">
@@ -14,29 +18,38 @@ const LeftMenu: React.FC = () => {
         <img src={logo} className="logo" />
         <p>Вишлистик</p>
       </div>
-      <div className="search">
-        <div>
-          <input
-            onChange={handleChange}
-            type="search"
-            placeholder="Код друга"
-            id="search"
-          />
-          <label htmlFor="search">Ввести код друга</label>
-        </div>
-        <button>
-          <img src={search} />
+      <div className="burger">
+        <button className="burgerButton" onClick={handleClick}>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-      <div className="menu">
-        <div className="menuItem">
-          <a href='/auth'>Вход</a>
+      <div>
+        <div className="search">
+          <div>
+            <input
+              onChange={handleChange}
+              type="search"
+              placeholder="Код друга"
+              id="search"
+            />
+            <label htmlFor="search">Ввести код друга</label>
+          </div>
+          <button>
+            <img src={search} />
+          </button>
         </div>
-        <div className="menuItem">
-          <a>Регистрация</a>
-        </div>
-        <div className="menuItem">
-          <a href='/'>Мой вишлист</a>
+        <div className="menu">
+          <div className="menuItem">
+            <a href="/auth">Вход</a>
+          </div>
+          <div className="menuItem">
+            <a>Регистрация</a>
+          </div>
+          <div className="menuItem">
+            <a href="/">Мой вишлист</a>
+          </div>
         </div>
       </div>
     </aside>

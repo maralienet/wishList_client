@@ -28,8 +28,14 @@ body
   .App
     height: 100vh
     display: flex
+    @media screen and (orientation: portrait)
+      flex-direction: column
     &>div
       width: 80%
+      @media screen and (orientation: portrait)
+        width: 95%
+        margin: 0 auto
+        flex-direction: column
 
   .leftMenu
     width: 20%
@@ -37,10 +43,16 @@ body
     padding-top: 50px
 
     @media screen and (orientation: portrait)
-      display: none
-    
+      width: 100vw
+      height: 50px
+      display: flex
+      align-items: center
+      padding-top: 15px
+      justify-content: space-between
+
     .top
       margin-bottom: 30px
+      margin-left: 10px
       .logo
         width: 80px
         height: auto
@@ -48,12 +60,43 @@ body
         margin-left: auto
         margin-right: auto
         margin-top: 15px
+        @media screen and (orientation: portrait)
+          width: 40px
       p
         margin: 0
         text-align: center
         font-weight: bolder
         font-size: 1.2em
         letter-spacing: 4px
+        @media screen and (orientation: portrait)
+          font-size: 0.9em
+
+    .burger
+      margin-right: 10px
+      display: none
+      margin-top: -5px
+      @media screen and (orientation: portrait)
+        display: block
+      .burgerButton
+        width: 30px
+        height: 30px
+        border: none
+        background-color: transparent
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        gap: 4px
+        span
+          background-color: $graffit
+          display: block
+          border-radius: 100px
+          width: 30px
+          height: 2.2px
+
+    &>div:last-child
+      @media screen and (orientation: portrait)
+        display: none
 
     .search
       display: flex
