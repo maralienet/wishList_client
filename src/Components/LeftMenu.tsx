@@ -38,9 +38,6 @@ const LeftMenu: React.FC = () => {
         <div className="menuItem">
           <a href='/'>Мой вишлист</a>
         </div>
-        <div className="menuItem">
-          <a>О проекте</a>
-        </div>
       </div>
     </aside>
   );

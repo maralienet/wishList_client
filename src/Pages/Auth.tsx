@@ -12,7 +12,7 @@ const Auth: React.FC = () => {
       <header>
         <h1 className="greet">Авторизация</h1>
       </header>
-      <div className="body"></div>
+      <div className="closedBook"></div>
     </div>
   );
 };
