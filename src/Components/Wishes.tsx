@@ -50,7 +50,7 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
     if (section) {
       axios
         .get(
-          `https://wishlist-server-7u5y.onrender.com/wishes?categId=${section}`
+          `https://wishlist-server-7u5y.onrender.com/wishes?categId=${section}`,
         )
         .then((res) => {
           let data = JSON.parse(res.data);
@@ -58,7 +58,7 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
         });
       axios
         .get(
-          `https://wishlist-server-7u5y.onrender.com/categories?id=${section}`
+          `https://wishlist-server-7u5y.onrender.com/categories?id=${section}`,
         )
         .then((res) => {
           let data = JSON.parse(res.data);
@@ -69,19 +69,26 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
 
   return (
     <div className="wishes">
-      <p className="secName" onClick={()=>console.log({sect},"//n",sect=="Книги")}>
+      <p
+        className="secName"
+        onClick={() => console.log('a')}
+      >
         --- {section ? `${sect}` : "Выбери категорию"} ---
       </p>
-      { sect ?
-        sect == "Книги" ? <p>Очень прошу отдавать предпочтение именно тем версиям книг, которые указаны в ссылках (в твёрдых обложках)</p> : null
-        :null}
+      {sect ? (
+        sect == "Книги" ? (
+          <p>
+            Очень прошу отдавать предпочтение именно тем версиям книг, которые
+            указаны в ссылках (в твёрдом переплёте)
+          </p>
+        ) : null
+      ) : null}
       <div>
-        {wishes.length > 0 ? (
-          wishes?.map((wish) => <Wish key={wish.id} inner={wish.text} url={wish.url} />)
-        ) : (
-          section && 
-          <img className='loading' src={loading} />
-        )}
+        {wishes.length > 0
+          ? wishes?.map((wish) => (
+              <Wish key={wish.id} inner={wish.text} url={wish.url} />
+            ))
+          : section && <img className="loading" src={loading} />}
       </div>
     </div>
   );
