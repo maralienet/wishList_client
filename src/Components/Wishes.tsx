@@ -69,15 +69,12 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
 
   return (
     <div className="wishes">
-      <p
-        className="secName"
-        onClick={() => console.log(Object.hasOwn({sect}, 'Книги'))}
-      >
+      <p className="secName">
         --- {section ? `${sect}` : "Выбери категорию"} ---
       </p>
       {sect ? (
         Object.hasOwn({sect}, 'Книги') ? (
-          <p>
+          <p style={{color:"red"}}>
             Очень прошу отдавать предпочтение именно тем версиям книг, которые
             указаны в ссылках (в твёрдом переплёте)
           </p>
