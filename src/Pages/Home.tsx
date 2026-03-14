@@ -19,10 +19,10 @@ const Home: React.FC = () => {
         </h2>
       </header>
       <div className="book">
-        {/* <aside>
+        <aside>
           <Sections onClick={handleClick} />
           <SectionsCollapsible onClick={handleClick} />
-        </aside> */}
+        </aside>
         <div className="rings"></div>
         <Wishes section={active} />
       </div>

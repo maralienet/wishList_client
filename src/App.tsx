@@ -8,7 +8,7 @@ import LeftMenu from "./Components/LeftMenu";
 const App: React.FC = () => {
   return (
     <div className="App">
-      <LeftMenu/>
+      {/* <LeftMenu/> */}
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
