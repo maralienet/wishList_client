@@ -74,7 +74,7 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
       </p>
       {sect ? (
         Object.hasOwn({sect}, 'Книги') ? (
-          <p style={{color:"red"}}>
+          <p className="redColouredText">
             Очень прошу отдавать предпочтение именно тем версиям книг, которые
             указаны в ссылках (в твёрдом переплёте)
           </p>
