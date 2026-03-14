@@ -69,9 +69,10 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
 
   return (
     <div className="wishes">
-      <p className="secName">
-        --- {section ? `${sect}` : "Выбери категорию"} ---
-      </p>
+      <p
+        className="secName"
+        onClick={() => console.log(Object.hasOwn({sect}, 'Книги'))}
+      >--- {section ? `${sect}` : "Выбери категорию"} ---</p>
       {sect ? (
         Object.hasOwn({sect}, 'Книги') ? (
           <p className="redColouredText">
