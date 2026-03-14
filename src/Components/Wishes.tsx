@@ -73,6 +73,9 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
         --- {section ? `${sect}` : "Выбери категорию"} ---
       </p>
       <div>
+        {section == "Книги" ? <p>Очень прошу отдавать предпочтение именно тем версиям книг, которые указаны в ссылках (в твёрдых обложках)</p> : null}
+      </div>
+      <div>
         {wishes.length > 0 ? (
           wishes?.map((wish) => <Wish key={wish.id} inner={wish.text} url={wish.url} />)
         ) : (
