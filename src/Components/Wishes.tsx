@@ -71,7 +71,7 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
     <div className="wishes">
       <p
         className="secName"
-        onClick={() => console.log(Object.hasOwn({sect}, 'Книги'))}
+        onClick={() => console.log((Object.hasOwn({section}, 993824187443380225),{section}))}
       >--- {section ? `${sect}` : "Выбери категорию"} ---</p>
       {sect ? (
         Object.hasOwn({section}, 993824187443380225) ? (
