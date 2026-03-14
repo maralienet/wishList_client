@@ -71,7 +71,7 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
     <div className="wishes">
       <p
         className="secName"
-        onClick={() => console.log({ sect })}
+        onClick={() => console.log({ section })}
       >
         --- {section ? `${sect}` : "Выбери категорию"} ---
       </p>
