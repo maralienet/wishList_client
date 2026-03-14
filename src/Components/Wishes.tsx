@@ -69,11 +69,11 @@ const Wishes: React.FC<WishesProps> = ({ section }) => {
 
   return (
     <div className="wishes">
-      <p className="secName">
+      <p className="secName" onClick={()=>console.log({sect},"//n",sect=="Книги")}>
         --- {section ? `${sect}` : "Выбери категорию"} ---
       </p>
-      { section ?
-        section == "Книги" ? <p>Очень прошу отдавать предпочтение именно тем версиям книг, которые указаны в ссылках (в твёрдых обложках)</p> : null
+      { sect ?
+        sect == "Книги" ? <p>Очень прошу отдавать предпочтение именно тем версиям книг, которые указаны в ссылках (в твёрдых обложках)</p> : null
         :null}
       <div>
         {wishes.length > 0 ? (
